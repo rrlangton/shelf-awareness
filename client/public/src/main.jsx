@@ -8,7 +8,7 @@ import Review from "./pages/Review.jsx";
 import Search from "./pages/Search.jsx";
 import User from "./pages/User.jsx";
 import Error from "./pages/Error.jsx";
-import Club from './pages/Club.jsx'
+import Club from "./pages/Club.jsx";
 import Profile from "./pages/Profile.jsx";
 import "./index.css";
 
