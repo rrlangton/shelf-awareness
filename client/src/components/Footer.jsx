@@ -1,103 +1,126 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Footer() {
-    return (
-        <section className="info_section ">
-    <div className="info_container layout_padding-top">
-      <div className="container">
-        <div className="info_top">
-          <div className="info_logo">
-            <img src="imgs/logo.png" alt="" />
-            <span>
-              Shelf Awareness
-            </span>
+  return (
+    <footer id="bottom" className="bg-primary2 text-white py-10">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <div className="flex items-center gap-2 mb-2">
+              <img
+                src="/images/logo.png"
+                alt="Bookmarkd Logo"
+                className="h-10 w-10"
+              />
+              <span className="text-2xl font-bold">Bookmarkd</span>
+            </div>
+            <span className="text-sm">Enjoying the App?</span>
+            <span className="text-sm mb-2">Share On Social Media!</span>
+            <div className="flex gap-3">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <img
+                  src="/images/fb.png"
+                  alt="facebook logo"
+                  className="h-7 w-7 hover:scale-110 transition"
+                />
+              </a>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <img
+                  src="/images/twitter.png"
+                  alt="twitter logo"
+                  className="h-7 w-7 hover:scale-110 transition"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <img
+                  src="/images/linkedin.png"
+                  alt="linkedin logo"
+                  className="h-7 w-7 hover:scale-110 transition"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <img
+                  src="/images/instagram.png"
+                  alt="instagram logo"
+                  className="h-7 w-7 hover:scale-110 transition"
+                />
+              </a>
+            </div>
           </div>
-          <span>Enjoying the App?</span>
-          <span>Share On Social Media!</span>
-          <div className="social_box">
-            <a href="https://www.facebook.com/" target="_blank">
-              <img src="imgs/fb.png" alt="facebook logo"/>
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-              <img src="imgs/twitter.png" alt="twitter logo"/>
-            </a>
-            <a href="https://www.linkedin.com/" target="_blank">
-              <img src="imgs/linkedin.png" alt="linkedin logo"/>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-              <img src="imgs/instagram.png" alt="instagram logo"/>
-            </a>
+          <div className="flex flex-col gap-2 items-center md:items-start">
+            <h5 className="font-bold text-lg mb-2">Links</h5>
+            <Link className="hover:text-primary1 transition" to="/">
+              Home
+            </Link>
+            <Link className="hover:text-primary1 transition" to="/search">
+              Browse Books
+            </Link>
+            <Link className="hover:text-primary1 transition" to="/clubs">
+              Book Clubs
+            </Link>
+          </div>
+          <div className="flex flex-col gap-2 items-center md:items-start">
+            <h5 className="font-bold text-lg mb-2">About Bookmarkd</h5>
+            <p className="max-w-xs text-sm">
+              The perfect place to read & write book reviews, curate
+              personalized book lists, and join book clubs!
+            </p>
+            <div className="flex items-center gap-2 mt-2">
+              <a
+                href="https://github.com/njohnson2897/bookmarkd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 hover:text-primary1 transition"
+              >
+                <img
+                  src="/images/gh.png"
+                  alt="github logo"
+                  className="h-6 w-6"
+                />
+                Github
+              </a>
+            </div>
+            <h6 className="text-xs mt-2">
+              Alexa Aguinada, Domas Dargis, Nate Johnson, & Robin Langton
+            </h6>
+          </div>
+          <div className="flex flex-col gap-2 items-center md:items-start w-full md:w-1/4">
+            <h5 className="font-bold text-lg mb-2">Contact Us</h5>
+            <p className="text-sm mb-2">
+              Have a question or feedback? We'd love to hear from you!
+            </p>
+            <Link
+              to="/contact"
+              className="bg-primary1 text-white rounded px-4 py-2 hover:bg-accent transition text-center"
+            >
+              Send us a Message
+            </Link>
           </div>
         </div>
-
-        <div className="info_main">
-          <div className="row">
-            <div className="col-md-3 col-lg-2">
-              <div className="info_link-box">
-                <h5>
-                  Links
-                </h5>
-                <ul>
-                  <li className="active">
-                  <Link className='nav-link' to='/'>Home</Link>
-                  </li>
-                  <li className="">
-                  <Link className='pr-2' to='/search'>Browse Books</Link>
-                  </li>
-                  <li className="">
-                  <Link className='nav-link' to='/clubs'>Book Clubs</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-md-3 ">
-              <h5>
-                About Shelf Awareness
-              </h5>
-              <p>
-                 A place for book lovers to share their favorite reads, create book clubs, and connect with other readers. 
-              </p>
-            </div>
-
-            <div className="col-md-3 col-lg-2 offset-lg-1">
-              <h5>
-                <div className="social_box">
-                  <a href="https://github.com/rrlangton/shelf-awareness" target="blank">
-                    <img src="imgs/gh.png" alt="githublogo"/>
-                  </a>
-                  </div>
-              </h5>
-              {/* <h6>Whether you're looking for your next great read or want to discuss your latest book club pick, Shelf Awareness has you covered.</h6> */}
-            </div>
-
-            <div className="col-md-3  offset-lg-1">
-              <div className="info_form ">
-                <h5>
-                  Contact Me
-                </h5>
-
-                {/* Changed from class= to className */}
-                <div className="form" id='bottom'>
-                  <form>
-                      <div className="form-group">
-                        {/* Changed from emailarea to textarea*/}
-                          <textarea type="email" className="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required></textarea>    
-
-                          <textarea name="contact-message" id="contact-message" cols="30" rows="2" className="form-control form-control-sm" placeholder="Message"></textarea>
-                      <button type="submit" className="btn btn-primary btn-block btn-sm mt-3">Send Message</button>
-                    </div>
-                  </form>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
-    );
+    </footer>
+  );
 }
 
 export default Footer;

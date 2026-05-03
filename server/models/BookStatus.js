@@ -1,18 +1,19 @@
-const { Schema } = require('mongoose');
+import { Schema } from 'mongoose';
 
 const bookStatusSchema = new Schema({
-    book: {
-        type: Schema.Types.ObjectId,
-        ref: 'Book',
-    },
-    status: {
-        type: String,
-        required: true,
-    },
-    favorite: {
-        type: Boolean,
-        required: true, 
-    },
-})
+  book: {
+    type: Schema.Types.ObjectId,
+    ref: 'Book',
+  },
+  status: {
+    type: String,
+    required: true,
+  },
+  favorite: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
+});
 
-module.exports = bookStatusSchema;
+export default bookStatusSchema;

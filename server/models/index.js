@@ -1,6 +1,14 @@
-const User = require('./User');
-const Review = require('./Review');
-const Club = require('./Club');
-const Book = require('./Book');
+import User from './User.js';
+import Book from './Book.js';
+import Review from './Review.js';
+import Club from './Club.js';
+import Contact from './Contact.js';
+import Like from './Like.js';
+import Comment from './Comment.js';
+import Follow from './Follow.js';
+import Notification from './Notification.js';
+import DiscussionThread from './DiscussionThread.js';
+import ClubInvitation from './ClubInvitation.js';
+import ClubJoinRequest from './ClubJoinRequest.js';
 
-module.exports = { User, Review, Club, Book };
+export { User, Book, Review, Club, Contact, Like, Comment, Follow, Notification, DiscussionThread, ClubInvitation, ClubJoinRequest };
