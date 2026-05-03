@@ -1,3 +1,4 @@
+import React from 'react';
 import { useQuery, useMutation } from "@apollo/client";
 import { useParams } from "react-router-dom";
 import { QUERY_USER } from "../utils/queries";

@@ -1,3 +1,4 @@
+import React from 'react';
 import Auth from "../utils/auth";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
@@ -121,7 +122,7 @@ export default function Home() {
               <div className="row">
                 <div className="col-md-5 offset-md-1">
                   <div className="detail-box">
-                    <h1>Bookmarkd</h1>
+                    <h1>Shelf Awareness</h1>
                     <p>The social network for book lovers.</p>
                     <p>
                       Because life's too short for a book you're not in the mood
@@ -160,7 +161,7 @@ export default function Home() {
               <div className="row">
                 <div className="col-md-5 offset-md-1">
                   <div className="detail-box">
-                    <h1>Bookmarkd</h1>
+                    <h1>Shelf Awareness</h1>
                     <p>The social network for book lovers.</p>
                     <p>
                       Because life's too short for a book you're not in the mood
@@ -218,7 +219,7 @@ export default function Home() {
               <div className="row">
                 <div className="col-md-5 offset-md-1">
                   <div className="detail-box">
-                    <h1>Bookmarkd</h1>
+                    <h1>Shelf Awareness</h1>
                     <p>The social network for book lovers.</p>
                     <p>
                       Because life's too short for a book you're not in the mood
@@ -291,7 +292,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-9 col-md-10 mx-auto">
               <div className="heading_container">
-                <h2>Featured Users</h2>
+                <h2>Book Reviews</h2>
               </div>
               <div
                 id="carouselExampleControls"

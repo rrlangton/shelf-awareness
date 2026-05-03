@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -7,7 +8,7 @@ function Footer() {
       <div className="container">
         <div className="info_top">
           <div className="info_logo">
-            <img src="images/logo.png" alt="" />
+            <img src="imgs/logo.png" alt="" />
             <span>
               Shelf Awareness
             </span>
@@ -16,16 +17,16 @@ function Footer() {
           <span>Share On Social Media!</span>
           <div className="social_box">
             <a href="https://www.facebook.com/" target="_blank">
-              <img src="images/fb.png" alt="facebook logo"/>
+              <img src="imgs/fb.png" alt="facebook logo"/>
             </a>
             <a href="https://twitter.com/" target="_blank">
-              <img src="images/twitter.png" alt="twitter logo"/>
+              <img src="imgs/twitter.png" alt="twitter logo"/>
             </a>
             <a href="https://www.linkedin.com/" target="_blank">
-              <img src="images/linkedin.png" alt="linkedin logo"/>
+              <img src="imgs/linkedin.png" alt="linkedin logo"/>
             </a>
             <a href="https://www.instagram.com/" target="_blank">
-              <img src="images/instagram.png" alt="instagram logo"/>
+              <img src="imgs/instagram.png" alt="instagram logo"/>
             </a>
           </div>
         </div>
@@ -55,19 +56,19 @@ function Footer() {
                 About Shelf Awareness
               </h5>
               <p>
-                Shelf Awareness is a social book tracking and review platform that solves the problem of scattered reading lists, lack of community around reading, and no central place to discover books through trusted social circles. Users can track what they've read, write reviews, follow other readers, and form book clubs — all in a cozy, warm, and atmospheric aesthetic that makes the reading experience feel intimate and culturally rich.
+                 A place for book lovers to share their favorite reads, create book clubs, and connect with other readers. 
               </p>
             </div>
 
             <div className="col-md-3 col-lg-2 offset-lg-1">
               <h5>
                 <div className="social_box">
-                  <a href="https://github.com/njohnson2897/bookmarkd" target="blank">
-                    <img src="images/gh.png" alt="githublogo"/>Github
+                  <a href="https://github.com/rrlangton/shelf-awareness" target="blank">
+                    <img src="imgs/gh.png" alt="githublogo"/>
                   </a>
                   </div>
               </h5>
-              <h6>Robin Langton</h6>
+              {/* <h6>Whether you're looking for your next great read or want to discuss your latest book club pick, Shelf Awareness has you covered.</h6> */}
             </div>
 
             <div className="col-md-3  offset-lg-1">
