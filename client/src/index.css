@@ -2,21 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Base styles (global resets, typography) */
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
+/* Reusable custom classes */
+@layer components {
+  .hero-bg {
+    background: linear-gradient(to right, #1a2e35 55%, #1cbbb4 55%);
+  }
+
+  .btn-primary {
+    @apply bg-[#ff4f5a] text-white px-4 py-2 border border-transparent transition;
+  }
+
+  .btn-primary:hover {
+    @apply bg-transparent border-[#ff4f5a] text-[#ff4f5a];
+  }
+
+  .section-padding {
+    @apply py-20;
+  }
+
+  .heading {
+    @apply font-bold uppercase text-2xl;
+  }
 }
 
-html {
-  margin: 0;
-  padding: 0;
+/* Utility overrides (rare) */
+@layer utilities {
 }

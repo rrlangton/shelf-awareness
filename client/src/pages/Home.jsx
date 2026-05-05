@@ -327,7 +327,7 @@ export default function Home() {
             <div className="flex-1 flex flex-col gap-6 items-start">
               <div className="mb-2">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-3 leading-tight">
-                  Bookmarkd
+                  Shelf Awareness
                 </h1>
                 <div className="h-1 w-24 bg-white/30 rounded-full"></div>
               </div>

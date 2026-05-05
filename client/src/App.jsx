@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -37,9 +38,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-white">
         <Navbar />
-        <main className="flex-grow bg-gradient-to-r from-primary2 to-primary1">
+        <main className="flex-grow">
           <Outlet />
         </main>
         <Footer />

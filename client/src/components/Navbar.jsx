@@ -61,10 +61,10 @@ function Navbar() {
           >
             <img
               src="/images/logo.png"
-              alt="Bookmarkd Logo"
+              alt="Logo"
               className="h-10 w-10"
             />
-            <span>Bookmarkd</span>
+            <span>Shelf Awareness</span>
           </Link>
 
           {/* Primary Navigation Links (Desktop) */}

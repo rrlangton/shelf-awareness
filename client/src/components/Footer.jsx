@@ -10,10 +10,10 @@ function Footer() {
             <div className="flex items-center gap-2 mb-2">
               <img
                 src="/images/logo.png"
-                alt="Bookmarkd Logo"
+                alt="Logo"
                 className="h-10 w-10"
               />
-              <span className="text-2xl font-bold">Bookmarkd</span>
+              <span className="text-2xl font-bold">Shelf Awareness</span>
             </div>
             <span className="text-sm">Enjoying the App?</span>
             <span className="text-sm mb-2">Share On Social Media!</span>
@@ -81,14 +81,14 @@ function Footer() {
             </Link>
           </div>
           <div className="flex flex-col gap-2 items-center md:items-start">
-            <h5 className="font-bold text-lg mb-2">About Bookmarkd</h5>
+            <h5 className="font-bold text-lg mb-2">About Shelf Awareness</h5>
             <p className="max-w-xs text-sm">
               The perfect place to read & write book reviews, curate
               personalized book lists, and join book clubs!
             </p>
             <div className="flex items-center gap-2 mt-2">
               <a
-                href="https://github.com/njohnson2897/bookmarkd"
+                href="https://github.com/rrlangton/shelf-awareness"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 hover:text-primary1 transition"
@@ -102,19 +102,19 @@ function Footer() {
               </a>
             </div>
             <h6 className="text-xs mt-2">
-              Alexa Aguinada, Domas Dargis, Nate Johnson, & Robin Langton
+              Created by Robin Langton
             </h6>
           </div>
           <div className="flex flex-col gap-2 items-center md:items-start w-full md:w-1/4">
             <h5 className="font-bold text-lg mb-2">Contact Us</h5>
             <p className="text-sm mb-2">
-              Have a question or feedback? We'd love to hear from you!
+              Have a question or feedback? We would love to hear from you!
             </p>
             <Link
               to="/contact"
               className="bg-primary1 text-white rounded px-4 py-2 hover:bg-accent transition text-center"
             >
-              Send us a Message
+              Send a Message
             </Link>
           </div>
         </div>
