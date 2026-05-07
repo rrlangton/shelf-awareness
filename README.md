@@ -32,26 +32,29 @@ Book data sourced from Google Books API (search, book details, cover images, des
 <b>Goals For Future Development</b>
 -
 <i>Book Clubs:</i>
+
  - curated reading lists based on interests
- - a place to hold video conferencing for club members
- - a group message thread with app notifications
+    - questionaire for clubs (at sign up) for book suggestions
  - link amazon books/kindle
- - add a Reading Challenges section where book clubs can complete reading goals and challenge other book clubs to competitons, such as, quiz bowls or who can complete their reading goals the fastest.
+ 
+ <i>Trivia Games:</i>
 
- <i>Reviews:</i>
-
- - Users leave reviews by answering a questionaire form with specific questions about their reading experience and reading suggestions for other users. 
- - Reviews can be written by a user or a book club host. 
+ - Play solo: answer trivia questions about different reading genres.
+    - Earn a high-score by answering the most questions right in a row
+ - Challenge another user: answer Trivia questions about books in a Jeopardy game.
+ - Quiz Bowls: Book Clubs can create their own trivia questions and host their own quiz bowl for the book they are reading. 
 
  <i>User Profile:</I>
 
- - Social-media-like Dashboard showing friends, clubs, reading history, and user status updates. 
- - Users can share and like photos and videos.
- - Initially a user's profile will have a questionaire at set-up and the user will answer questions about reading preferences and favorite books. 
- - Profiles can be private or public, users can adjust in settings. 
- - User's can link their friends from their contacts or facebook friends, adding anyone that also has this app.
+ - Users can add a profile picture. 
+ - Users can choose from light or dark background. 
+ - User's can opt in to link their contacts, to add friends.
+ - Items pinned from the main dashboard are saved in folders on user's profile, similar to pintrest.
 
  <i>Home Dashboard:</i>
 
-- After signing in, user's will be directed to the main dashboard that shows the status updates of friends and other public users.
-- The main dashboard is populated with videos, pictures, and news articles about books and reading - all from user's of the app.
+- The main dashboard is populated with media, news, and fun articles about books and authors.
+ - Like social media for the language arts. 
+- Upcoming Events Section with book signings and live readings in your area. 
+- New Releases Section highlights highly anticipated new book realeases
+- User's can like, comment, and save/pin articles on the main dashboard and access them from their profile.
