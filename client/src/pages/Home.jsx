@@ -114,8 +114,6 @@ export default function Home() {
       });
       if (data?.login?.token) {
         Auth.login(data.login.token);
-        // Update state and redirect to show logged-in view
-        window.location.reload();
       }
     } catch (e) {
       console.error(e);
@@ -131,8 +129,6 @@ export default function Home() {
       });
       if (data?.addUser?.token) {
         Auth.login(data.addUser.token);
-        // Refresh page to show logged-in view
-        window.location.reload();
       }
     } catch (e) {
       console.error(e);

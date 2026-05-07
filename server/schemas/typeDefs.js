@@ -197,7 +197,7 @@ const typeDefs = `
     addBook(google_id: String!): Book
     addBookStatus(book: ID!, user: ID!, status: String!, favorite: Boolean!): User
     addReview(book: ID!, user: ID!, stars: Float!, title: String, description: String): Review
-    addClub(name: String!, owner: ID!, description: String): Club
+    addClub(name: String!, owner: ID!, description: String, privacy: String): Club
     addClubMember(clubId: ID!, userId: ID!): Club
     removeClubMember(clubId: ID!, userId: ID!): Club
     updateReview(reviewId: ID!, stars: Float, title: String, description: String): Review
