@@ -145,7 +145,7 @@ const ClubDetail = () => {
       if (club?.currentBookGoogleId) {
         try {
           const response = await fetch(
-            `https://www.googleapis.com/books/v1/volumes/${club.currentBookGoogleId}`
+            `https://www.googleapis.com/books/v1/volumes/${club.currentBookGoogleId}?key=${import.meta.env.VITE_GOOGLE_BOOKS_API_KEY}`
           );
           if (response.ok) {
             const bookData = await response.json();
@@ -361,9 +361,7 @@ const ClubDetail = () => {
     setSearching(true);
     try {
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
-          bookSearchQuery
-        )}&maxResults=10`
+        `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchQuery)}&maxResults=10&key=${import.meta.env.VITE_GOOGLE_BOOKS_API_KEY}`
       );
       if (response.ok) {
         const data = await response.json();
@@ -393,7 +391,7 @@ const ClubDetail = () => {
     try {
       // First ensure book exists in our database by checking Google Books API
       const bookResponse = await fetch(
-        `https://www.googleapis.com/books/v1/volumes/${bookGoogleId}`
+        `https://www.googleapis.com/books/v1/volumes/${bookGoogleId}?key=${import.meta.env.VITE_GOOGLE_BOOKS_API_KEY}`
       );
       if (!bookResponse.ok) {
         throw new Error("Book not found");

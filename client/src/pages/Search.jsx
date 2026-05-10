@@ -1,73 +1,58 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLazyQuery } from "@apollo/client";
+import { SEARCH_GOOGLE_BOOKS } from "../utils/queries";
 
 function Search() {
+  const navigate = useNavigate();
+
   const [searchedBook, setSearchedBook] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedYear, setSelectedYear] = useState("");
-  const [selectedGenre, setSelectedGenre] = useState("");
-  const [selectedRating, setSelectedRating] = useState("");
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
 
-  const navigate = useNavigate();
+  const [searchBooks, { loading }] = useLazyQuery(SEARCH_GOOGLE_BOOKS);
 
   const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    const bookTitle = searchQuery.trim();
+  e.preventDefault();
 
-    if (!bookTitle) {
-      setError("Please enter a book title.");
+  const bookTitle = searchQuery.trim();
+
+  if (!bookTitle) {
+    setError("Please enter a book title.");
+    return;
+  }
+
+  setError("");
+  setHasSearched(true);
+
+  try {
+    const { data } = await searchBooks({
+      variables: { query: bookTitle },
+    });
+
+    const items = data?.searchGoogleBooks || [];
+
+    if (items.length === 0) {
+      setError("No books found. Try a different search term.");
+      setSearchedBook([]);
       return;
     }
 
-    setLoading(true);
-    setError("");
-    setHasSearched(true);
+    const bookData = items.map((book) => ({
+      bookId: book.googleId,
+      authors: book.authors || ["Unknown Author"],
+      title: book.title || "No title",
+      image: book.thumbnail|| "",
+    }));
 
-    try {
-      let url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
-        bookTitle
-      )}&maxResults=40`;
-
-      const response = await fetch(url);
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const { items } = await response.json();
-      
-      if (!items || items.length === 0) {
-        setError("No books found. Try a different search term.");
-        setSearchedBook([]);
-        setLoading(false);
-        return;
-      }
-
-      const bookData = items.map((book) => ({
-        bookId: book.id,
-        authors: book.volumeInfo?.authors || ["Unknown Author"],
-        title: book.volumeInfo?.title || "No title",
-        image: book.volumeInfo?.imageLinks?.thumbnail || book.volumeInfo?.imageLinks?.smallThumbnail || "",
-        rating: book.volumeInfo?.averageRating || null,
-        publishedDate: book.volumeInfo?.publishedDate || null,
-        description: book.volumeInfo?.description || null,
-        pageCount: book.volumeInfo?.pageCount || null,
-        categories: book.volumeInfo?.categories || [],
-      }));
-
-      setSearchedBook(bookData);
-    } catch (error) {
-      console.error("There was a problem fetching the data:", error);
-      setError("Error searching for books. Please try again.");
-      setSearchedBook([]);
-    } finally {
-      setLoading(false);
-    }
-  };
+    setSearchedBook(bookData);
+  } catch (err) {
+    console.error(err);
+    setError("Error searching for books.");
+    setSearchedBook([]);
+  }
+};
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">

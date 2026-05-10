@@ -37,7 +37,7 @@ const ReviewsPage = () => {
 
           try {
             const response = await fetch(
-              `https://www.googleapis.com/books/v1/volumes/${review.book.google_id}`
+              `https://www.googleapis.com/books/v1/volumes/${review.book.googleId}?key=${import.meta.env.VITE_GOOGLE_BOOKS_API_KEY}`
             );
             if (!response.ok) return null;
 

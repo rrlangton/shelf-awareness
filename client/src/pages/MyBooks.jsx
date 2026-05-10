@@ -46,7 +46,7 @@ const MyBooks = () => {
         if (bookStatus.book?.google_id) {
           try {
             const response = await fetch(
-              `https://www.googleapis.com/books/v1/volumes/${bookStatus.book.google_id}`
+              `https://www.googleapis.com/books/v1/volumes/${bookStatus.book.googleId}?key=${import.meta.env.VITE_GOOGLE_BOOKS_API_KEY}`
             );
             if (response.ok) {
               const bookData = await response.json();

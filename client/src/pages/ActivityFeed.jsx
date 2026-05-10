@@ -27,7 +27,7 @@ const ActivityFeed = () => {
           if (!details[googleId]) {
             try {
               const response = await fetch(
-                `https://www.googleapis.com/books/v1/volumes/${googleId}`
+                `https://www.googleapis.com/books/v1/volumes/${googleId}?key=${import.meta.env.VITE_GOOGLE_BOOKS_API_KEY}`
               );
               if (response.ok) {
                 const bookData = await response.json();

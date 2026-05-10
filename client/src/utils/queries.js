@@ -90,6 +90,17 @@ export const QUERY_BOOKS = gql`
   }
 `;
 
+export const SEARCH_GOOGLE_BOOKS = gql`
+  query SearchGoogleBooks($query: String!) {
+    searchGoogleBooks(query: $query) {
+      googleId
+      title
+      authors
+      thumbnail
+    }
+  }
+`;
+
 export const QUERY_BOOKGOOGLE = gql`
   query BookGoogle($googleId: String!) {
     bookGoogle(googleId: $googleId) {

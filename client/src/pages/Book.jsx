@@ -79,7 +79,7 @@ const Book = () => {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const url = `https://www.googleapis.com/books/v1/volumes/${bookId}`;
+        const url = `https://www.googleapis.com/books/v1/volumes/${googleId}?key=${import.meta.env.VITE_GOOGLE_BOOKS_API_KEY}`;
         const response = await fetch(url);
 
         if (!response.ok) {

@@ -35,14 +35,14 @@ Book data sourced from Google Books API (search, book details, cover images, des
 
  - curated reading lists based on interests
     - questionaire for clubs (at sign up) for book suggestions
- - link amazon books/kindle
+ - Quiz Bowls: Book Clubs can create their own trivia questions and host their own quiz bowl for the book they are reading. 
  
  <i>Trivia Games:</i>
 
  - Play solo: answer trivia questions about different reading genres.
     - Earn a high-score by answering the most questions right in a row
  - Challenge another user: answer Trivia questions about books in a Jeopardy game.
- - Quiz Bowls: Book Clubs can create their own trivia questions and host their own quiz bowl for the book they are reading. 
+ - Quiz-bowls: create your own triva questions and invite others to play. 
 
  <i>User Profile:</I>
 
@@ -58,3 +58,4 @@ Book data sourced from Google Books API (search, book details, cover images, des
 - Upcoming Events Section with book signings and live readings in your area. 
 - New Releases Section highlights highly anticipated new book realeases
 - User's can like, comment, and save/pin articles on the main dashboard and access them from their profile.
+- Link amazon books for purchasing. 
